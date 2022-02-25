@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #4daf54;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 390px;
+    background-color: #272d40;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.card_icon {
+    color: #fff;
+    z-index: 100;
+    position: relative;
+}
+
+.card_icon .card_like{
+    position: absolute;
+    left: 0;
+}
+
+.card_icon .card_cart{
+    position: absolute;
+    right: 0;
+}
+
+.card_icon ion-icon{
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 100;
+
+} 
+
+.card_image{
+    text-align: center;
+    transition:all ease-in-out 0.5s;
+}
+
+.card_image img{
+    width: 100%;
+    text-align: center;
+    margin-left: -23px;
+}
+
+h2.card_title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #54a837;
+    text-align: center;
+    transition:all ease-in-out 0.5s;
+
+}
+
+p.card_price {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 14px;
+    transition:all ease-in-out 0.5s;
+
+}
+
+.card_heading{
+    color: #fff;
+    transition: ease-in-out 0.5s;
+    visibility: hidden;
+    margin-top: 135px;
+    opacity: 0;
+}
+
+.card_size,
+.card_color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card_size h3,
+.card_color h3{
+    font-size: 21px;
+    text-transform: capitalize;
+    font-weight: 400;
+    padding-right: 15px;
+}
+
+.card_size span {
+    padding: 8px;
+    background-color: #ccc;
+    border-radius: 7px;
+    margin: 0 5px;
+    color: #000;
+    transition: 0.4s;
+}
+
+.card_size span:hover,
+.card_color span:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card_color span {
+    padding: 13px;
+    border-radius: 50px;
+    margin: 0 5px;
+    color: #000;
+    transition: 0.4s;
+}
+
+.card_color span.green{
+    background-color: green;
+}
+
+.card_color span.red{
+    background-color: red;
+}
+
+.card_color span.black{
+    background-color: black;
+}
+
+.card_action button {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    background-color: #6ecc4d;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px;
+    transition:ease-in-out 0.4s;
+}
+
+.card_action button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* hover  */
+.card:hover .card_image{
+    transform: translate(-15px,-90px) rotate(-20deg);
+}
+
+.card:hover .card_title{
+    transform: translate(-25px, -80px);
+}
+
+.card:hover .card_price{
+    transform: translate(-105px, -80px);
+}
+
+.card:hover .card_heading{
+    transform: translateY(-50px);
+    visibility:visible;
+    margin-top: -5px;
+    opacity: 1;
+}
+
+.card_like:hover ion-icon,
+.card_cart:hover ion-icon{
+    color: #4daf54;
+    transition: 0.4s;
+}
+
+
+
+
+
